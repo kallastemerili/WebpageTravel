@@ -3,18 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TravelBloom - Home</title>
+<title>TravelBloom</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Navigation -->
-<nav>
+<nav class="navbar">
   <div class="logo">TravelBloom</div>
-  <ul>
-    <li onclick="location.href='index.html'">Home</li>
-    <li onclick="location.href='about.html'">About Us</li>
-    <li onclick="location.href='contact.html'">Contact Us</li>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
   </ul>
   <div class="nav-search">
     <input type="text" id="nav-search-input" placeholder="Search destinations...">
@@ -22,26 +21,22 @@
   </div>
 </nav>
 
-<!-- Hero Section -->
 <header class="hero">
   <h1>Discover Your Dream Destinations</h1>
   <p>Personalized travel recommendations for every traveler.</p>
   <button onclick="window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })">Explore</button>
 </header>
 
-<!-- Beach Recommendations -->
 <section>
   <h2>Top Beach Destinations</h2>
   <div class="cards" id="beach-cards"></div>
 </section>
 
-<!-- Temple Recommendations -->
 <section>
   <h2>Top Temple Destinations</h2>
   <div class="cards" id="temple-cards"></div>
 </section>
 
-<!-- City/Country Recommendations -->
 <section>
   <h2>Explore Cities & Countries</h2>
   <div class="cards" id="country-cards"></div>
