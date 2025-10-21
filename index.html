@@ -7,38 +7,88 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Navigation -->
   <nav class="navbar">
     <div class="logo">TravelBloom</div>
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Welcome to TravelBloom</h1>
-      <p>Your gateway to personalized travel recommendations and unforgettable adventures.</p>
+  <section id="hero" class="hero">
+    <div class="hero-content fade-in">
+      <h1>Explore, Dream, Discover</h1>
+      <p>Your personalized travel companion to unforgettable adventures.</p>
       <button onclick="scrollToSearch()">Book Now</button>
-      <div class="social-icons">
-        <a href="#" class="social">🌐</a>
-        <a href="#" class="social">📷</a>
-        <a href="#" class="social">🐦</a>
-      </div>
     </div>
   </section>
 
   <!-- Search Section -->
-  <section class="search-section" id="search">
+  <section id="search" class="search-section fade-in">
     <h2>Find Your Perfect Destination</h2>
-    <input type="text" id="searchInput" placeholder="Enter a place, beach, temple, or country...">
-    <button onclick="performSearch()">Search</button>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Beach, Temple, or City...">
+      <button onclick="performSearch()">Search</button>
+    </div>
     <div id="results" class="results"></div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about fade-in">
+    <h1>About TravelBloom</h1>
+    <p>We provide personalized travel recommendations to explore the world your way.</p>
+    <div class="team">
+      <div class="member">
+        <h3>Jane Doe</h3>
+        <p>Founder & CEO</p>
+      </div>
+      <div class="member">
+        <h3>John Smith</h3>
+        <p>Head of Travel Recommendations</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact fade-in">
+    <h1>Contact Us</h1>
+    <form id="contactForm">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <div id="formMessage"></div>
   </section>
 
   <script src="data.js"></script>
   <script src="script.js"></script>
+  <script>
+    // Contact form submission
+    const form = document.getElementById('contactForm');
+    const formMessage = document.getElementById('formMessage');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      formMessage.textContent = "Thank you! We'll get back to you shortly.";
+      form.reset();
+    });
+
+    // Scroll-triggered animations
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = { threshold: 0.2, rootMargin: "0px 0px -50px 0px" };
+    const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll){
+      entries.forEach(entry => {
+        if(!entry.isIntersecting) return;
+        entry.target.classList.add('appear');
+        appearOnScroll.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => appearOnScroll.observe(fader));
+  </script>
 </body>
 </html>
