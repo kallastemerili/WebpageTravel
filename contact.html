@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="logo">TravelCo</div>
+  <ul>
+    <li onclick="location.href='index.html'">Home</li>
+    <li onclick="location.href='about.html'">About Us</li>
+    <li onclick="location.href='contact.html'">Contact Us</li>
+  </ul>
+</nav>
+
+<section>
+  <h2>Contact Us</h2>
+  <form id="contact-form">
+    <input type="text" placeholder="Name" required>
+    <input type="email" placeholder="Email" required>
+    <textarea rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<script>
+document.getElementById('contact-form').addEventListener('submit', function(e){
+  e.preventDefault();
+  alert('Thank you for contacting us! We will get back to you soon.');
+  this.reset();
+});
+</script>
+
+</body>
+</html>
