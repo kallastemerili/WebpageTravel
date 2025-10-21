@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Us</title>
+<title>About Us - TravelBloom</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,12 +15,72 @@
     <li onclick="location.href='about.html'">About Us</li>
     <li onclick="location.href='contact.html'">Contact Us</li>
   </ul>
+  <div class="nav-search">
+    <input type="text" id="nav-search-input" placeholder="Search destinations...">
+    <div class="nav-search-results" id="nav-search-results"></div>
+  </div>
 </nav>
 
-<section>
-  <h2>About Us</h2>
-  <p>TravelBloom is dedicated to helping travelers discover ideal destinations worldwide. Our platform offers personalized recommendations, detailed descriptions, and multimedia content to plan memorable trips. We prioritize user experience, seamless navigation, and engaging content for every traveler.</p>
+<!-- Company Background -->
+<section class="company-section">
+  <h2>About TravelBloom</h2>
+  <p class="company-text">
+    TravelBloom is dedicated to helping travelers explore the world with personalized recommendations and curated experiences. 
+    Our mission is to make travel planning seamless, inspiring, and enjoyable for every adventurer.
+  </p>
 </section>
 
+<!-- Team Section -->
+<section class="team-section">
+  <h2>Meet Our Team</h2>
+  <div class="team-cards">
+    <div class="team-card">
+      <img src="images/team1.jpg" alt="CEO">
+      <h3>Alex Johnson</h3>
+      <p>CEO & Founder</p>
+    </div>
+    <div class="team-card">
+      <img src="images/team2.jpg" alt="Travel Expert">
+      <h3>Maria Rodriguez</h3>
+      <p>Travel Expert</p>
+    </div>
+    <div class="team-card">
+      <img src="images/team3.jpg" alt="Marketing Lead">
+      <h3>David Lee</h3>
+      <p>Marketing Lead</p>
+    </div>
+  </div>
+</section>
+
+<!-- Company History -->
+<section class="history-section">
+  <h2>Our Journey</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <h4>2015 - Founded</h4>
+      <p>TravelBloom was founded with a vision to simplify travel planning for everyone.</p>
+    </div>
+    <div class="timeline-item">
+      <h4>2017 - First 100 Destinations</h4>
+      <p>Curated 100+ travel destinations worldwide.</p>
+    </div>
+    <div class="timeline-item">
+      <h4>2020 - Mobile App Launch</h4>
+      <p>TravelBloom app launched for on-the-go recommendations.</p>
+    </div>
+    <div class="timeline-item">
+      <h4>2023 - Global Recognition</h4>
+      <p>Recognized as a top travel recommendation platform globally.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Office Map -->
+<section class="history-section">
+  <h2>Our Offices</h2>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18..." width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</section>
+
+<script src="script.js"></script>
 </body>
 </html>
