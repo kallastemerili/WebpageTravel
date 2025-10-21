@@ -1,76 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TravelBloom</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
+  <meta charset="UTF-8">
+  <title>TravelBloom</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav>
-        <div class="logo">
-            <i class="fa fa-plane" style="font-size:36px;"></i>
-            <h1>TravelBloom</h1>
-        </div>
-        <ul style="width: 100%;margin: 16px 0 16px 313px;">
-            <li><a href="/travel-bloom/index">Home</a></li>
-            <li><a href="/travel-bloom/about-us">About Us</a></li>
-            <li><a href="/travel-bloom/contact-us">Contact Us</a></li>
-        </ul>
+  <nav class="navbar">
+    <div class="nav-left">
+      <a href="index.html" class="logo">TravelBloom</a>
+    </div>
+    <div class="nav-center">
+      <input type="text" id="searchInput" placeholder="Search destinations...">
+      <button onclick="searchDestinations()">Search</button>
+      <button onclick="clearSearch()">Clear</button>
+    </div>
+    <div class="nav-right">
+      <span id="localTime"></span>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
 
-    </nav>
+  <main class="contact">
+    <h1>Contact Us</h1>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p id="formResponse"></p>
+  </main>
 
-    <!-- Home Page Content -->
-    <header>
-        <div class="social-line"></div>
-        <div class="social-icons">
-            <ul>
-                <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a></li>
-                <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a></li>
-            </ul>
-        </div>
-        <div class="header-content contact">
-            <div>
-                <h1>Contact Us</h1>
-                <p>Get in Touch!</p>
-            </div>
-            <div class="contact-form">
-                    <form action="/submit-contact" method="POST">
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
-                
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
-                
-                        <label for="message">Message:</label>
-                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
-                
-                        <button type="submit">Submit</button>
-                    </form>
-            </div>
-
-      
-        </div>
-    </header>
-
-<script>
-    function performSearch() {
-        // Functionality to search for recommendations
-        var input = document.getElementById('searchInput').value;
-        alert('Search for: ' + input);
-    }
-
-    function resetSearch() {
-        // Functionality to clear the search input
-        document.getElementById('searchInput').value = '';
-    }
-</script>
+  <script src="js/script.js"></script>
 </body>
-
-
 </html>
