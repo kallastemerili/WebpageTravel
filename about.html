@@ -6,37 +6,50 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-  <!-- Navigation Bar -->
   <nav class="navbar">
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="contact.html">Contact Us</a>
-    <input type="text" id="searchInput" placeholder="Search destination...">
-    <button onclick="searchDestinations()">Search</button>
-    <button onclick="clearSearch()">Clear</button>
-    <span id="localTime"></span>
+    <div class="nav-left">
+      <a href="index.html" class="logo">TravelGuide</a>
+    </div>
+    <div class="nav-center">
+      <input type="text" id="searchInput" placeholder="Search destinations...">
+      <button onclick="searchDestinations()">Search</button>
+      <button onclick="clearSearch()">Clear</button>
+    </div>
+    <div class="nav-right">
+      <span id="localTime"></span>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </div>
   </nav>
 
-  <main>
-    <section class="company-overview">
+  <main class="about">
+    <section class="company">
       <h1>Our Mission</h1>
-      <p>Providing personalized travel recommendations to make your trips memorable.</p>
+      <p>To provide personalized travel recommendations that help users plan unforgettable trips.</p>
     </section>
 
     <section class="team">
-      <h2>Meet Our Team</h2>
-      <p>Profiles of team members and their contributions.</p>
+      <h2>Meet the Team</h2>
+      <div class="team-members">
+        <div class="member">
+          <h3>Jane Doe</h3>
+          <p>Founder & Travel Expert</p>
+        </div>
+        <div class="member">
+          <h3>John Smith</h3>
+          <p>Frontend Developer</p>
+        </div>
+      </div>
     </section>
 
     <section class="history">
       <h2>Company History</h2>
-      <p>Timeline of milestones and achievements.</p>
+      <p>Founded in 2025, TravelGuide has helped thousands of travelers find their ideal destinations.</p>
     </section>
 
     <section class="locations">
       <h2>Office Locations</h2>
-      <p>Headquarters and regional offices with maps.</p>
+      <p>Headquarters: Toronto, Canada</p>
     </section>
   </main>
 
