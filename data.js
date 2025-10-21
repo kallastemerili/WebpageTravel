@@ -44,6 +44,6 @@ const destinations = [
     name: 'Singapore, Singapore',
     description: 'Romantic city with historical landmarks.',
     images: ['images/coutry2.jpg'],
-    timeZone: 'Europe/Paris'
+    timeZone: 'Asia/Singapore'
   }
 ];
