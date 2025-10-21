@@ -1,58 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>About Us</title>
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="navbar">
-    <div class="nav-left">
-      <a href="index.html" class="logo">TravelGuide</a>
-    </div>
-    <div class="nav-center">
-      <input type="text" id="searchInput" placeholder="Search destinations...">
-      <button onclick="searchDestinations()">Search</button>
-      <button onclick="clearSearch()">Clear</button>
-    </div>
-    <div class="nav-right">
-      <span id="localTime"></span>
-      <a href="about.html">About Us</a>
-      <a href="contact.html">Contact</a>
-    </div>
-  </nav>
 
-  <main class="about">
-    <section class="company">
-      <h1>Our Mission</h1>
-      <p>To provide personalized travel recommendations that help users plan unforgettable trips.</p>
-    </section>
+<nav>
+  <div class="logo">TravelCo</div>
+  <ul>
+    <li onclick="location.href='index.html'">Home</li>
+    <li onclick="location.href='about.html'">About Us</li>
+    <li onclick="location.href='contact.html'">Contact Us</li>
+  </ul>
+</nav>
 
-    <section class="team">
-      <h2>Meet the Team</h2>
-      <div class="team-members">
-        <div class="member">
-          <h3>Jane Doe</h3>
-          <p>Founder & Travel Expert</p>
-        </div>
-        <div class="member">
-          <h3>John Smith</h3>
-          <p>Frontend Developer</p>
-        </div>
-      </div>
-    </section>
+<section>
+  <h2>About Us</h2>
+  <p>TravelCo is dedicated to helping travelers discover ideal destinations worldwide. Our platform offers personalized recommendations, detailed descriptions, and multimedia content to plan memorable trips. We prioritize user experience, seamless navigation, and engaging content for every traveler.</p>
+</section>
 
-    <section class="history">
-      <h2>Company History</h2>
-      <p>Founded in 2025, TravelGuide has helped thousands of travelers find their ideal destinations.</p>
-    </section>
-
-    <section class="locations">
-      <h2>Office Locations</h2>
-      <p>Headquarters: Toronto, Canada</p>
-    </section>
-  </main>
-
-  <script src="js/script.js"></script>
 </body>
 </html>
