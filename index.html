@@ -2,36 +2,79 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>TravelBloom</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TravelCo - Home</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="nav-left">
-      <a href="index.html" class="logo">TravelBloom</a>
-    </div>
-    <div class="nav-center">
-      <input type="text" id="searchInput" placeholder="Search destinations...">
-      <button onclick="searchDestinations()">Search</button>
-      <button onclick="clearSearch()">Clear</button>
-    </div>
-    <div class="nav-right">
-      <span id="localTime"></span>
-      <a href="about.html">About Us</a>
-      <a href="contact.html">Contact</a>
-    </div>
-  </nav>
 
-  <!-- Hero Section -->
-  <header class="hero">
-    <h1>Explore Your Dream Destinations</h1>
-    <p>Find the perfect beach, temple, or city based on your preferences.</p>
-  </header>
+<!-- Navigation -->
+<nav>
+  <div class="logo">TravelCo</div>
+  <ul>
+    <li onclick="location.href='index.html'">Home</li>
+    <li onclick="location.href='about.html'">About Us</li>
+    <li onclick="location.href='contact.html'">Contact Us</li>
+  </ul>
+</nav>
 
-  <!-- Recommendations Section -->
-  <section id="recommendations" class="recommendations"></section>
+<!-- Hero Section -->
+<header class="hero">
+  <h1>Discover Your Dream Destinations</h1>
+  <p>Personalized travel recommendations for every traveler.</p>
+  <button onclick="window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })">Explore</button>
+</header>
 
-  <script src="js/script.js"></script>
+<!-- Beach Recommendation -->
+<section>
+  <h2>Beach Destinations</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="images/beach1.jpg" alt="Maldives Beach">
+      <div class="card-content">
+        <h3>Maldives</h3>
+        <p>White sand beaches and crystal clear waters perfect for relaxation.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="images/beach2.jpg" alt="Bora Bora Beach">
+      <div class="card-content">
+        <h3>Bora Bora</h3>
+        <p>Tropical paradise with overwater bungalows and breathtaking views.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Temple Recommendation -->
+<section>
+  <h2>Temple Destinations</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="images/temple1.jpg" alt="Angkor Wat">
+      <div class="card-content">
+        <h3>Angkor Wat, Cambodia</h3>
+        <p>Historic temple complex known for stunning architecture and history.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="images/temple2.jpg" alt="Golden Temple">
+      <div class="card-content">
+        <h3>Golden Temple, India</h3>
+        <p>Spiritual center with beautiful gold-plated architecture.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Country Recommendation -->
+<section>
+  <h2>Explore Countries</h2>
+  <div class="cards" id="country-cards">
+    <!-- JS dynamically populates countries -->
+  </div>
+</section>
+
+<script src="script.js"></script>
 </body>
 </html>
