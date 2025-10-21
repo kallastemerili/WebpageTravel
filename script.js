@@ -43,19 +43,20 @@ const temples = [
   {name:"Angkor Wat, Cambodia", img:"images/temple1.jpg"},
   {name:"Golden Temple, India", img:"images/temple2.jpg"}
 ];
-const cities = [
-  {name:"Toronto, Canada", img:"images/country1.jpg"},
-  {name:"Paris, France", img:"images/country2.jpg"}
+const countriesData = [
+  {name:"Canada", img:"images/country1.jpg"},
+  {name:"France", img:"images/country2.jpg"}
 ];
 
-// Function to add local time
-function getLocalTime(countryName){
+// Function to display local time
+function getLocalTime() {
   const now = new Date();
   return now.toLocaleTimeString('en-US', {hour: '2-digit', minute:'2-digit'});
 }
 
 function displayCards(container, items){
   if(!container) return;
+  container.innerHTML = '';
   items.forEach(item=>{
     const card = document.createElement('div');
     card.classList.add('card');
@@ -63,7 +64,7 @@ function displayCards(container, items){
       <img src="${item.img}" alt="${item.name}">
       <div class="card-content">
         <h3>${item.name}</h3>
-        <p>Current Local Time: ${getLocalTime(item.name)}</p>
+        <p>Current Local Time: ${getLocalTime()}</p>
       </div>
     `;
     container.appendChild(card);
@@ -72,4 +73,4 @@ function displayCards(container, items){
 
 displayCards(beachCards, beaches);
 displayCards(templeCards, temples);
-displayCards(countryCards, countries);
+displayCards(countryCards, countriesData);
