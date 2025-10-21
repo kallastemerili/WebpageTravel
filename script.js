@@ -3,7 +3,7 @@ const countryContainer = document.getElementById('country-cards');
 fetch('https://restcountries.com/v3.1/all')
   .then(res => res.json())
   .then(data => {
-    const countries = data.slice(0, 4); // show 4 countries for demo
+    const countries = data.slice(0, 8); // show 8 countries for demo
     countries.forEach(country => {
       const card = document.createElement('div');
       card.classList.add('card');
