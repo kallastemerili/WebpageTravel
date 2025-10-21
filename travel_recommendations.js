@@ -1,5 +1,6 @@
 let places = [];
 
+
 // Fetch the JSON file and save its contents to the `places` variable
 fetch('travel_recommendation_api.json')
     .then(response => {
