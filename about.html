@@ -1,42 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About TravelBloom</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelZoom</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
 </head>
 <body>
-  <nav class="navbar">
-    <div class="logo">TravelBloom</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="contact.html">Contact Us</a></li>
-    </ul>
-  </nav>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">
+            <i class="fa fa-plane" style="font-size:36px;"></i>
+            <h1>TravelZoom</h1>
+        </div>
+        <ul style="width: 100%;margin: 16px 0 16px 313px;">
+            <li><a href="/travel-zoom/index">Home</a></li>
+            <li><a href="/travel-zoom/about-us">About Us</a></li>
+            <li><a href="/travel-zoom/contact-us">Contact Us</a></li>
+        </ul>
 
-  <section class="about">
-    <h1>About TravelBloom</h1>
-    <p>Our mission is to provide personalized travel recommendations for every explorer.</p>
-    
-    <h2>Our Team</h2>
-    <div class="team">
-      <div class="member">
-        <h3>Jane Doe</h3>
-        <p>Founder & CEO</p>
-      </div>
-      <div class="member">
-        <h3>John Smith</h3>
-        <p>Head of Travel Recommendations</p>
-      </div>
-    </div>
+    </nav>
 
-    <h2>Our Journey</h2>
-    <p>Founded in 2023, TravelBloom has helped thousands of travelers discover hidden gems worldwide.</p>
+    <!-- Home Page Content -->
+    <header>
+        <div class="social-line"></div>
+        <div class="social-icons">
+            <ul>
+                <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+        </div>
+        <div class="header-content about">
+            <h1>About Us</h1>
+            <p>At TravelEase, we’re dedicated to simplifying your journeys by providing expert guidance, personalized recommendations, and reliable travel advice. Our mission is to empower travelers with the tools and confidence they need to explore the world effortlessly. Whether you’re planning a weekend getaway or a globe-spanning adventure, we’re here to ensure your travel experiences are seamless and unforgettable.</p>
+            <div class="staff">
+                <div class="staff-title"> 
+                    <h2>Our<br> Team</h2>
+                </div>
+                <div class="staff-members">
+                     <!-- Team Member 1 -->
+                        <div>
+                            <img src="images/teams1.jpg">
+                            <div>
+                                <h3>Alex Johnson</h3>
+                                <p>Passionate traveler crafting memorable experiences.</p>
+                                <button>CEO</button>
+                            </div>
+                        </div>
 
-    <h2>Office Locations</h2>
-    <p>123 Travel Lane, Wanderlust City</p>
-  </section>
+                        <!-- Team Member 2 -->
+                        <div>
+                            <img src="images/team2.jpg">
+                            <div>
+                                <h3>Megan Stevens</h3>
+                                <p>Expert planner organizing seamless tour adventures.</p>
+                                <button>CTO</button>
+                            </div>
+                        </div>
+
+                        <!-- Team Member 3 -->
+                        <div>
+                            <img src="images/team3.jpg">
+                            <div>
+                                <h3>Claudio Ramirez</h3>
+                                <p>Specialist dedicated to unique global discoveries.</p>
+                                <button>Travel Consultant</button>
+                            </div>
+                        </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+<script>
+    function performSearch() {
+        // Functionality to search for recommendations
+        var input = document.getElementById('searchInput').value;
+        alert('Search for: ' + input);
+    }
+
+    function resetSearch() {
+        // Functionality to clear the search input
+        document.getElementById('searchInput').value = '';
+    }
+</script>
 </body>
+
+
 </html>
