@@ -1,47 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TravelBloom - Home</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TravelBloom - Explore Your World</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <nav class="navbar">
+    <div class="logo">TravelBloom</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
 
-<nav class="navbar">
-  <div class="logo">TravelBloom</div>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About Us</a></li>
-    <li><a href="contact.html">Contact Us</a></li>
-  </ul>
-  <div class="nav-search">
-    <input type="text" id="nav-search-input" placeholder="Search destinations...">
-    <div class="nav-search-results" id="nav-search-results"></div>
-  </div>
-</nav>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to TravelBloom</h1>
+      <p>Your gateway to personalized travel recommendations and unforgettable adventures.</p>
+      <button onclick="scrollToSearch()">Book Now</button>
+      <div class="social-icons">
+        <a href="#" class="social">🌐</a>
+        <a href="#" class="social">📷</a>
+        <a href="#" class="social">🐦</a>
+      </div>
+    </div>
+  </section>
 
-<header class="hero">
-  <h1>Discover Your Dream Destinations</h1>
-  <p>Personalized travel recommendations for every traveler.</p>
-  <button onclick="window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })">Explore</button>
-</header>
+  <!-- Search Section -->
+  <section class="search-section" id="search">
+    <h2>Find Your Perfect Destination</h2>
+    <input type="text" id="searchInput" placeholder="Enter a place, beach, temple, or country...">
+    <button onclick="performSearch()">Search</button>
+    <div id="results" class="results"></div>
+  </section>
 
-<section>
-  <h2>Top Beach Destinations</h2>
-  <div class="cards" id="beach-cards"></div>
-</section>
-
-<section>
-  <h2>Top Temple Destinations</h2>
-  <div class="cards" id="temple-cards"></div>
-</section>
-
-<section>
-  <h2>Explore Countries</h2>
-  <div class="cards" id="country-cards"></div>
-</section>
-
-<script src="script.js"></script>
+  <script src="data.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
