@@ -1,41 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact TravelBloom</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelBloom</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
 </head>
 <body>
-  <nav class="navbar">
-    <div class="logo">TravelBloom</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="contact.html">Contact Us</a></li>
-    </ul>
-  </nav>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">
+            <i class="fa fa-plane" style="font-size:36px;"></i>
+            <h1>TravelZoom</h1>
+        </div>
+        <ul style="width: 100%;margin: 16px 0 16px 313px;">
+            <li><a href="/travel-zoom/index">Home</a></li>
+            <li><a href="/travel-zoom/about-us">About Us</a></li>
+            <li><a href="/travel-zoom/contact-us">Contact Us</a></li>
+        </ul>
 
-  <section class="contact">
-    <h1>Contact Us</h1>
-    <form id="contactForm">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-    <div id="formMessage"></div>
-  </section>
+    </nav>
 
-  <script>
-    const form = document.getElementById('contactForm');
-    const formMessage = document.getElementById('formMessage');
+    <!-- Home Page Content -->
+    <header>
+        <div class="social-line"></div>
+        <div class="social-icons">
+            <ul>
+                <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+        </div>
+        <div class="header-content contact">
+            <div>
+                <h1>Contact Us</h1>
+                <p>Get in Touch!</p>
+            </div>
+            <div class="contact-form">
+                    <form action="/submit-contact" method="POST">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                
+                        <button type="submit">Submit</button>
+                    </form>
+            </div>
 
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      formMessage.textContent = "Thank you! We'll get back to you shortly.";
-      form.reset();
-    });
-  </script>
+      
+        </div>
+    </header>
+
+<script>
+    function performSearch() {
+        // Functionality to search for recommendations
+        var input = document.getElementById('searchInput').value;
+        alert('Search for: ' + input);
+    }
+
+    function resetSearch() {
+        // Functionality to clear the search input
+        document.getElementById('searchInput').value = '';
+    }
+</script>
 </body>
+
+
 </html>
