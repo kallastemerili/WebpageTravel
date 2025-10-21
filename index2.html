@@ -1,572 +1,4 @@
 <!DOCTYPE html>
-
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Wanderlust - Find Your Perfect Escape</title>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          colors: {
-            "primary": "#13a4ec",
-            "background-light": "#f6f7f8",
-            "background-dark": "#101c22",
-          },
-          fontFamily: {
-            "display": ["Plus Jakarta Sans", "Noto Sans", "sans-serif"]
-          },
-          borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
-        },
-      },
-    }
-  </script>
-<style>
-    .material-symbols-outlined {
-      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-    }
-  </style>
-</head>
-<body class="bg-background-light dark:bg-background-dark font-display">
-<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
-<div class="layout-container flex h-full grow flex-col">
-<div class="flex flex-1 justify-center">
-<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
-<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f3f4] dark:border-b-background-dark px-10 py-3">
-<div class="flex items-center gap-4 text-[#111618] dark:text-white">
-<div class="size-6 text-primary">
-<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-<path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z" fill="currentColor"></path>
-</svg>
-</div>
-<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Wanderlust</h2>
-</div>
-<div class="flex flex-1 justify-end gap-8">
-<div class="flex items-center gap-9">
-<a class="text-[#111618] dark:text-white text-sm font-medium leading-normal" href="#">Home</a>
-<a class="text-[#111618] dark:text-white text-sm font-medium leading-normal" href="#">About</a>
-<a class="text-[#111618] dark:text-white text-sm font-medium leading-normal" href="#">Contact Us</a>
-</div>
-<div class="flex gap-2">
-<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em]">
-<span class="truncate">Sign Up</span>
-</button>
-<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-background-light dark:bg-background-dark/50 text-[#111618] dark:text-white text-sm font-bold leading-normal tracking-[0.015em] border border-stone-200 dark:border-stone-700">
-<span class="truncate">Log In</span>
-</button>
-</div>
-</div>
-</header>
-<main class="flex flex-col flex-1">
-<div class="@container">
-<div class="@[480px]:p-4">
-<div class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-lg items-center justify-center p-4" data-alt="A picturesque landscape with mountains and a serene lake at sunset" style='background-image: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuD2Sph7-jhfLVyr47JEJgH8RTDkolMjIGOi8KatWFihbamd0FZt2J2dlFAaf319eXalo8X48LhIvDtYBAXE85-4tBs4YQLep6uUzPIqUmQxjlx-rMn0jc2OYH1G3vRFm90wnZqy6jYFe41_gvIMGyV7Jo4xttGRQKrcFCJq5XyB18pHmr_M5Z-DYlUmdQLZhDedjQUzFeefg-p5zsus8McWnEJQf222scWPraWYnAwI3zDBftEKYfdASrHwUhay9G7FZjYB8U60M3NZ");'>
-<div class="flex flex-col gap-4 text-center">
-<h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]">
-                      Find Your Perfect Escape
-                    </h1>
-<h2 class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
-                      Personalized travel recommendations for your next adventure.
-                    </h2>
-</div>
-<label class="flex flex-col min-w-40 w-full max-w-[480px] gap-4">
-<div class="flex w-full flex-1 items-stretch rounded-xl h-14 @[480px]:h-16">
-<div class="text-stone-500 flex border border-stone-200 dark:border-stone-700 bg-white dark:bg-background-dark items-center justify-center pl-[15px] rounded-l-xl border-r-0">
-<span class="material-symbols-outlined">search</span>
-</div>
-<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden text-[#111618] dark:text-white focus:outline-0 focus:ring-0 border border-stone-200 dark:border-stone-700 bg-white dark:bg-background-dark focus:border-stone-300 dark:focus:border-stone-600 h-full placeholder:text-stone-500 dark:placeholder:text-stone-400 px-[15px] border-r-0 pr-2 border-l-0 pl-2 text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal" placeholder="e.g., beaches, temples, Toronto, Canada" value=""/>
-<div class="flex items-center justify-center rounded-r-xl border-l-0 border border-stone-200 dark:border-stone-700 bg-white dark:bg-background-dark pr-[7px]">
-<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]">
-<span class="truncate">Search</span>
-</button>
-</div>
-</div>
-<div class="flex gap-4 py-2 px-4 justify-center items-center backdrop-blur-sm bg-black/20 rounded-xl">
-<p class="text-white text-sm font-medium">Local Time in Toronto, Canada:</p>
-<div class="flex grow basis-0 flex-col items-stretch">
-<div class="flex items-center justify-center">
-<p class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">10:30:00</p>
-</div>
-</div>
-</div>
-</label>
-</div>
-</div>
-</div>
-<h2 class="text-[#111618] dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-8">Featured Destinations</h2>
-<div class="flex overflow-x-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
-<div class="flex items-stretch p-4 gap-4">
-<div class="flex h-full flex-1 flex-col gap-4 rounded-xl bg-white dark:bg-background-dark/50 shadow-[0_0_4px_rgba(0,0,0,0.1)] min-w-60">
-<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-t-xl flex flex-col" data-alt="Eiffel Tower in Paris, France" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAt7A1cdU6sYSu0I0lfrZF-29NRFBKr3UbTddbOxV7EKkdDQm3e62zqWWKVu48cXcWxLxkr8IIbe6k9g2yEkGX6R9581JURoV0QTZ-ADM9P6HLK1BaMxaN6bcKfKtwq3DRtr4gKCGWMQcZM7feChzB_-dgMBnkrk17VFpfRG0JNEoarIcpIAQTsDc9RrrQHU-mKubxrqYNG59R1e_tXysXMwMCJ7cs0TFILV1jK1LBPr-9mGojiGqZjzXsAsWIrkzwoDqsdYR643LHz");'></div>
-<div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
-<div>
-<p class="text-[#111618] dark:text-white text-base font-medium leading-normal">Paris, France</p>
-<p class="text-stone-500 dark:text-stone-400 text-sm font-normal leading-normal">The city of love and lights</p>
-</div>
-<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/20 text-primary dark:bg-primary/30 dark:text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/30 dark:hover:bg-primary/40 transition-colors">
-<span class="truncate">Explore</span>
-</button>
-</div>
-</div>
-<div class="flex h-full flex-1 flex-col gap-4 rounded-xl bg-white dark:bg-background-dark/50 shadow-[0_0_4px_rgba(0,0,0,0.1)] min-w-60">
-<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-t-xl flex flex-col" data-alt="Fushimi Inari Shrine in Kyoto, Japan" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA74GAjDzAio3Dad3C6jQRtKsofPB1jdpaqrVBqJS_J-jDtU6RlsFUfROM8AaNaS7Vbn_u5ibCr2AO5CJJPw2AjyndnXQz06vxSeSo0EID6ArCuUy5cy71P3orDTlRp2T7F1RWMVeGNyVn-HQz5wimi9E_0deqOpHTfHeHxEyNxIpWq5_Zc9ZsKyhgHPKGMRcwN2NxZ2wWB8qADq2tubyS9G14rM9dOICU3BvcFsNTPzZhy4grV5inxeHdyeI7E5ZxhqBoxCaxLW8J6");'></div>
-<div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
-<div>
-<p class="text-[#111618] dark:text-white text-base font-medium leading-normal">Kyoto, Japan</p>
-<p class="text-stone-500 dark:text-stone-400 text-sm font-normal leading-normal">The cultural heart of Japan</p>
-</div>
-<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/20 text-primary dark:bg-primary/30 dark:text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/30 dark:hover:bg-primary/40 transition-colors">
-<span class="truncate">Explore</span>
-</button>
-</div>
-</div>
-<div class="flex h-full flex-1 flex-col gap-4 rounded-xl bg-white dark:bg-background-dark/50 shadow-[0_0_4px_rgba(0,0,0,0.1)] min-w-60">
-<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-t-xl flex flex-col" data-alt="Handara Gate in Bali, Indonesia" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBbZN2xswROu8kTnSInpC6uoQZ7JxYa0SFqsfIrKL8yEAxrdvufYh4GJhPKVGNuJagquvCWA7VUCvrdmBksFVHuYOISJ77QNT24UFLH5Jc0r05VXExBZ0yyvvrR_pn5-nFNmkFDXzIYrG1Gd2J9jlmgoSoqrF-VKnnAv-yaBgvfYI0hZhx6FevB631FK34BBhOHKLQ03EeXM5NBGq79UZKJn7pnI1coyxh5sO1Hh0TjJFwFTRLFv9DnNvEABp4t77VtKtQoSJU1AjVR");'></div>
-<div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
-<div>
-<p class="text-[#111618] dark:text-white text-base font-medium leading-normal">Bali, Indonesia</p>
-<p class="text-stone-500 dark:text-stone-400 text-sm font-normal leading-normal">The island of the gods</p>
-</div>
-<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/20 text-primary dark:bg-primary/30 dark:text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/30 dark:hover:bg-primary/40 transition-colors">
-<span class="truncate">Explore</span>
-</button>
-</div>
-</div>
-<div class="flex h-full flex-1 flex-col gap-4 rounded-xl bg-white dark:bg-background-dark/50 shadow-[0_0_4px_rgba(0,0,0,0.1)] min-w-60">
-<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-t-xl flex flex-col" data-alt="Santorini, Greece" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAqCLTvonLQNG0zihFdUK8PESk-ZdWKl7GRlafNfYPU1yGlBzL1oNBu3LvAxyKW5-MuSyv-LCemJt0bVYEfqpgWwBh03WNinqkY3BYR_fY5093mx5OVWeN5CJ4CYXcp93J45sV-NF8CEbDjIpYQGAI-tgfuLPHv51Tt_AJbuEosgGTS27TSlDLNJOlrS4O2e2L2ZzJLycPQqUVg4Qn1Rn593WVYgSgZBDT5aGykqEoxcoIiRIorf9flmtvLNu6Hk6ByxyP2d7uUDGS6");'></div>
-<div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
-<div>
-<p class="text-[#111618] dark:text-white text-base font-medium leading-normal">Santorini, Greece</p>
-<p class="text-stone-500 dark:text-stone-400 text-sm font-normal leading-normal">Iconic sunsets and whitewashed villages</p>
-</div>
-<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/20 text-primary dark:bg-primary/30 dark:text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/30 dark:hover:bg-primary/40 transition-colors">
-<span class="truncate">Explore</span>
-</button>
-</div>
-</div>
-</div>
-</div>
-<div class="p-4 my-8">
-<div class="bg-primary/10 dark:bg-primary/20 p-8 rounded-xl text-center flex flex-col items-center gap-4">
-<h3 class="text-2xl font-bold text-primary dark:text-white">Ready for an adventure?</h3>
-<p class="text-stone-600 dark:text-stone-300 max-w-md">Let us help you find the perfect destination that matches your travel style. Start your journey today!</p>
-<button class="flex min-w-[200px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] mt-2 hover:bg-primary/90 transition-colors">
-<span class="truncate">Discover Your Next Adventure</span>
-</button>
-</div>
-</div>
-</main>
-<footer class="bg-white dark:bg-background-dark/50 border-t border-stone-200 dark:border-stone-800 mt-auto">
-<div class="max-w-[960px] mx-auto px-10 py-8">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-<div>
-<h4 class="text-lg font-bold text-[#111618] dark:text-white mb-4">Wanderlust</h4>
-<p class="text-sm text-stone-600 dark:text-stone-400">Your personal guide to the world's most breathtaking destinations.</p>
-</div>
-<div>
-<h5 class="text-md font-semibold text-[#111618] dark:text-white mb-4">Quick Links</h5>
-<ul class="space-y-2">
-<li><a class="text-sm text-stone-600 dark:text-stone-400 hover:text-primary" href="#">Home</a></li>
-<li><a class="text-sm text-stone-600 dark:text-stone-400 hover:text-primary" href="#">About Us</a></li>
-<li><a class="text-sm text-stone-600 dark:text-stone-400 hover:text-primary" href="#">Contact</a></li>
-</ul>
-</div>
-<div>
-<h5 class="text-md font-semibold text-[#111618] dark:text-white mb-4">Legal</h5>
-<ul class="space-y-2">
-<li><a class="text-sm text-stone-600 dark:text-stone-400 hover:text-primary" href="#">Terms of Service</a></li>
-<li><a class="text-sm text-stone-600 dark:text-stone-400 hover:text-primary" href="#">Privacy Policy</a></li>
-</ul>
-</div>
-<div>
-<h5 class="text-md font-semibold text-[#111618] dark:text-white mb-4">Newsletter</h5>
-<p class="text-sm text-stone-600 dark:text-stone-400 mb-2">Subscribe to get travel tips and inspiration.</p>
-<div class="flex">
-<input class="form-input flex-grow rounded-l-lg border-stone-300 dark:border-stone-700 bg-background-light dark:bg-background-dark text-sm focus:ring-primary focus:border-primary" placeholder="Your email" type="email"/>
-<button class="bg-primary text-white px-4 rounded-r-lg text-sm font-bold">Subscribe</button>
-</div>
-</div>
-</div>
-<div class="border-t border-stone-200 dark:border-stone-800 mt-8 pt-6 text-center text-sm text-stone-500 dark:text-stone-400">
-<p>© 2024 Wanderlust. All rights reserved.</p>
-</div>
-</div>
-</footer>
-</div>
-</div>
-</div>
-</div>
-</body></html>
-
-<!DOCTYPE html>
-
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>About Us - Wanderlust</title>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#0077B6",
-                        "secondary": "#FF7B00",
-                        "accent": "#F4A261",
-                        "background-light": "#f6f7f8",
-                        "background-dark": "#101c22",
-                    },
-                    fontFamily: {
-                        "display": ["Plus Jakarta Sans", "sans-serif"]
-                    },
-                    borderRadius: {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                },
-            },
-        };
-    </script>
-</head>
-<body class="bg-background-light dark:bg-background-dark font-display">
-<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
-<div class="layout-container flex h-full grow flex-col">
-<div class="flex flex-1 justify-center">
-<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
-<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f3f4] dark:border-b-gray-700 px-10 py-3">
-<div class="flex items-center gap-4 text-[#111618] dark:text-white">
-<div class="size-6 text-primary">
-<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-<path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z" fill="currentColor"></path>
-</svg>
-</div>
-<h2 class="text-[#111618] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Wanderlust</h2>
-</div>
-<div class="flex flex-1 justify-end gap-8">
-<div class="flex items-center gap-9">
-<a class="text-[#111618] dark:text-white text-sm font-medium leading-normal" href="#">Destinations</a>
-<a class="text-primary text-sm font-bold leading-normal" href="#">About Us</a>
-<a class="text-[#111618] dark:text-white text-sm font-medium leading-normal" href="#">Contact</a>
-</div>
-<div class="flex gap-2">
-<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
-<span class="truncate">Log In</span>
-</button>
-<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#f0f3f4] dark:bg-gray-700 text-[#111618] dark:text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
-<span class="truncate">Sign Up</span>
-</button>
-</div>
-</div>
-</header>
-<main class="flex-1">
-<div class="py-10">
-<div class="@container">
-<div class="@[480px]:p-4">
-<div class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4" data-alt="Vibrant tropical beach with clear blue water and palm trees" style='background-image: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuB6sg86dvizZBE9Jrt7o8JYJMkyv0ekwisxAYvBOm5ciIpuhDhx27jDqbzkOuO7WU2HVXFg_U7S3nF7zRLxbYAhq7SerUOphHGUC2wt3cjiW5dD6LonD8BbrfWcVow74ghVdqAmTqHgirZnsQIyySgYNHWU9sftXl8qt45FtFk8qeHG3uMvnqYdjr_3abWoLgRpqxkpFz37wAYP-6DOOvLkER1QhG5FdXVGT7r8rLyT6nbbS7s0VIjFFkjipEbAu272yz3cijubWDMQ");'>
-<div class="flex flex-col gap-2 text-center">
-<h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]">Discover the World with Us</h1>
-<h2 class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">Your journey to the perfect destination starts here.</h2>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="px-4 py-10 text-center">
-<h2 class="text-[#111618] dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Our Mission</h2>
-<p class="text-[#111618] dark:text-gray-300 text-base font-normal leading-normal pb-3 pt-1 px-4">To make travel accessible and personalized for everyone, everywhere.</p>
-</div>
-<div class="flex flex-col gap-10 px-4 py-10 @container bg-white dark:bg-background-dark rounded-xl">
-<div class="flex flex-col gap-4">
-<h1 class="text-[#111618] dark:text-white tracking-light text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-[720px]">Our Values</h1>
-<p class="text-[#111618] dark:text-gray-300 text-base font-normal leading-normal max-w-[720px]">We are guided by a set of core values that define our culture and drive our decisions.</p>
-</div>
-<div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-0">
-<div class="flex flex-1 gap-3 rounded-lg border border-[#dbe2e6] dark:border-gray-700 bg-background-light dark:bg-gray-800 p-4 flex-col hover:shadow-lg transition-shadow">
-<span class="material-symbols-outlined text-secondary text-3xl">groups</span>
-<div class="flex flex-col gap-1">
-<h2 class="text-[#111618] dark:text-white text-base font-bold leading-tight">Customer-Centric</h2>
-<p class="text-[#617c89] dark:text-gray-400 text-sm font-normal leading-normal">We put our users at the heart of everything we do.</p>
-</div>
-</div>
-<div class="flex flex-1 gap-3 rounded-lg border border-[#dbe2e6] dark:border-gray-700 bg-background-light dark:bg-gray-800 p-4 flex-col hover:shadow-lg transition-shadow">
-<span class="material-symbols-outlined text-secondary text-3xl">lightbulb</span>
-<div class="flex flex-col gap-1">
-<h2 class="text-[#111618] dark:text-white text-base font-bold leading-tight">Innovation</h2>
-<p class="text-[#617c89] dark:text-gray-400 text-sm font-normal leading-normal">We constantly seek new and better ways to enhance your travel experience.</p>
-</div>
-</div>
-<div class="flex flex-1 gap-3 rounded-lg border border-[#dbe2e6] dark:border-gray-700 bg-background-light dark:bg-gray-800 p-4 flex-col hover:shadow-lg transition-shadow">
-<span class="material-symbols-outlined text-secondary text-3xl">shield</span>
-<div class="flex flex-col gap-1">
-<h2 class="text-[#111618] dark:text-white text-base font-bold leading-tight">Integrity</h2>
-<p class="text-[#617c89] dark:text-gray-400 text-sm font-normal leading-normal">We are committed to honesty and transparency in all our interactions.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="px-4 py-16">
-<h2 class="text-center text-[#111618] dark:text-white text-[32px] font-bold leading-tight tracking-[-0.015em] mb-2">Meet the Team</h2>
-<p class="text-center text-gray-600 dark:text-gray-400 mb-12">The passionate individuals behind Wanderlust</p>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<!-- Team Member Card -->
-<div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden text-center group">
-<img class="w-full h-56 object-cover object-center group-hover:scale-105 transition-transform duration-300" data-alt="Portrait of a smiling man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiuIwksQ5Wfr_nQMIOznbY_FVvftpfosvq_WISQgLduJJ7yKAyzID0jjhSeC9y7Uh8OEev1FeYYVyBsm2pieqiClaaWQFPwkD1rhX5dkIboLE1WbjID3c89vcO8wuk5JM2tgn7ApbTwtVPqxyjTesaqT8uZS8v6jeXNolPlk5a2uLHBdqvuBQCcAZ-6MvlYslNZmUCE6xd6bAGB_CRrs8QvzKNMdJ-8-wCPhyvW1yX9XFLSnRS0Ly8dvjNI_eg0RVTCuWfh53eV3zB"/>
-<div class="p-6">
-<h3 class="text-lg font-bold text-primary">Alex Johnson</h3>
-<p class="text-sm text-gray-500 dark:text-gray-400">CEO &amp; Founder</p>
-<p class="mt-2 text-sm text-gray-700 dark:text-gray-300">"My travel philosophy is to immerse myself in local cultures and discover hidden gems off the beaten path."</p>
-</div>
-</div>
-<!-- Team Member Card -->
-<div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden text-center group">
-<img class="w-full h-56 object-cover object-center group-hover:scale-105 transition-transform duration-300" data-alt="Portrait of a smiling woman" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBU-WwlbsrI57qffJQ4Fb-mujujBZ9P3W3ZQjPFCRemGFhr2qqSQBfYbe2oJN6B4_7QE3WaKhPepHyQGShtEUiKjnXCeBnv6vp0Y2-GOEcPvU8SJyHOLY5jT15gW-qitH6_JD0kp-pb_nhc8t3MyM2MjZL8L2AgjRMctRzzHeJX3jxym4K_0Ugk7G3D_6Y6zcyJVvf5fQ86Ojg9JQyGPZel_a3Ca78CufjOCrFCAhIh0CehIdCaIxZLNhvg3aW_Xpbdu0ZROXt-6AEj"/>
-<div class="p-6">
-<h3 class="text-lg font-bold text-primary">Maria Garcia</h3>
-<p class="text-sm text-gray-500 dark:text-gray-400">Head of Product</p>
-<p class="mt-2 text-sm text-gray-700 dark:text-gray-300">"I believe travel is about creating memories. My goal is to build a product that makes those moments unforgettable."</p>
-</div>
-</div>
-<!-- Team Member Card -->
-<div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden text-center group">
-<img class="w-full h-56 object-cover object-center group-hover:scale-105 transition-transform duration-300" data-alt="Portrait of another smiling man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuBDsdky-J1M2gUFZCeYmp3B9N3REebRWQHpE07E6kgK-UuI5DbWeGrHr6zcyxi04vluAzcHvM7TuaH3r7-9kKweKWEI3jPVF9B92IS2mE6KyIIshUlzmyPD_DIN4Wy9kBzgllu6xar3k5kWU24UN6WxrVAdwBi3bvlxAnqXe42faGulH7xyR0pg8RATtkMvVPCOy9fEIJKLlbnvBYUQWZYTIlr8d-0tVH8gW3GVwMMPHJnaq9FTvhmsSwNJL7U7y9UaVxGpZ9Iyjt"/>
-<div class="p-6">
-<h3 class="text-lg font-bold text-primary">David Chen</h3>
-<p class="text-sm text-gray-500 dark:text-gray-400">Lead Engineer</p>
-<p class="mt-2 text-sm text-gray-700 dark:text-gray-300">"For me, travel is problem-solving. Finding the most efficient and enjoyable way to explore a new place is the ultimate challenge."</p>
-</div>
-</div>
-</div>
-</div>
-<div class="px-4 py-16 bg-white dark:bg-background-dark rounded-xl">
-<h2 class="text-center text-[#111618] dark:text-white text-[32px] font-bold leading-tight tracking-[-0.015em] mb-12">Our Journey</h2>
-<div class="relative">
-<!-- The vertical line -->
-<div class="absolute left-1/2 h-full w-0.5 bg-gray-200 dark:bg-gray-700 -translate-x-1/2"></div>
-<!-- Timeline Items -->
-<div class="space-y-16">
-<!-- Timeline Item 1 -->
-<div class="relative">
-<div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-secondary flex items-center justify-center">
-<span class="material-symbols-outlined text-white">flag</span>
-</div>
-<div class="flex items-center w-full">
-<div class="w-1/2 pr-8 text-right">
-<p class="text-lg font-bold text-primary">2020</p>
-<h3 class="text-xl font-semibold text-[#111618] dark:text-white">Company Founding</h3>
-<p class="text-gray-600 dark:text-gray-400 mt-1">Wanderlust was born from a passion for travel and technology.</p>
-</div>
-<div class="w-1/2"></div>
-</div>
-</div>
-<!-- Timeline Item 2 -->
-<div class="relative">
-<div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-secondary flex items-center justify-center">
-<span class="material-symbols-outlined text-white">group</span>
-</div>
-<div class="flex items-center w-full">
-<div class="w-1/2"></div>
-<div class="w-1/2 pl-8 text-left">
-<p class="text-lg font-bold text-primary">2021</p>
-<h3 class="text-xl font-semibold text-[#111618] dark:text-white">First 10,000 Users</h3>
-<p class="text-gray-600 dark:text-gray-400 mt-1">Reached a major milestone, validating our vision and product.</p>
-</div>
-</div>
-</div>
-<!-- Timeline Item 3 -->
-<div class="relative">
-<div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-secondary flex items-center justify-center">
-<span class="material-symbols-outlined text-white">payments</span>
-</div>
-<div class="flex items-center w-full">
-<div class="w-1/2 pr-8 text-right">
-<p class="text-lg font-bold text-primary">2023</p>
-<h3 class="text-xl font-semibold text-[#111618] dark:text-white">Series A Funding</h3>
-<p class="text-gray-600 dark:text-gray-400 mt-1">Secured funding to expand our team and global reach.</p>
-</div>
-<div class="w-1/2"></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="px-4 py-16">
-<h2 class="text-center text-[#111618] dark:text-white text-[32px] font-bold leading-tight tracking-[-0.015em] mb-12">Our Offices</h2>
-<div class="flex flex-col lg:flex-row gap-8">
-<div class="lg:w-1/3">
-<ul class="space-y-4">
-<li class="p-4 rounded-lg bg-white dark:bg-gray-800 shadow-sm cursor-pointer hover:bg-accent/20 dark:hover:bg-accent/10 transition-colors">
-<h3 class="font-bold text-primary">San Francisco, USA</h3>
-<p class="text-sm text-gray-600 dark:text-gray-400">123 Main Street, CA 94105</p>
-</li>
-<li class="p-4 rounded-lg bg-white dark:bg-gray-800 shadow-sm cursor-pointer hover:bg-accent/20 dark:hover:bg-accent/10 transition-colors">
-<h3 class="font-bold text-primary">London, UK</h3>
-<p class="text-sm text-gray-600 dark:text-gray-400">456 Tech Avenue, EC1A 1AA</p>
-</li>
-<li class="p-4 rounded-lg bg-white dark:bg-gray-800 shadow-sm cursor-pointer hover:bg-accent/20 dark:hover:bg-accent/10 transition-colors">
-<h3 class="font-bold text-primary">Tokyo, Japan</h3>
-<p class="text-sm text-gray-600 dark:text-gray-400">789 Innovation Blvd, 100-0005</p>
-</li>
-</ul>
-</div>
-<div class="lg:w-2/3 h-96 rounded-xl overflow-hidden shadow-lg">
-<img class="w-full h-full object-cover" data-alt="A stylized world map showing office locations in San Francisco, London, and Tokyo." data-location="world-map" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrburfWQH3MzlqtOaKAxqk-iVwxArObUJxa92rAOgE60p8vixQddA8Y5n9XoX6jzGkea91QLl1D0z4Qu_IXkysfxRAoMQC23geVi-njrhp1FKj3htlZUTApTZlpkKJLsWXYVx1F77XHhiIe8WcHOzHAqKcRq7uYN6m92k-Kinorr4kxM6cCOImpXAmU28s2zB_o4hlO2wy231ItY7l-qoOm_GEHEiIHG4xy7Rr44U7SUQYYijZ5vmv7YuW9IQtROSq-kUXNjbdjOer"/>
-</div>
-</div>
-</div>
-</main>
-</div>
-</div>
-</div>
-</div>
-</body></html>
-
-<!DOCTYPE html>
-
-<html lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Contact Us - Wanderlust</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
-<script>
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          colors: {
-            "primary": "#13a4ec",
-            "background-light": "#f6f7f8",
-            "background-dark": "#101c22",
-          },
-          fontFamily: {
-            "display": ["Plus Jakarta Sans", "Noto Sans", "sans-serif"]
-          },
-          borderRadius: {
-            "DEFAULT": "0.25rem",
-            "lg": "0.5rem",
-            "xl": "0.75rem",
-            "full": "9999px"
-          },
-        },
-      },
-    }
-  </script>
-<style>
-    .form-input.form-input-textarea {
-      min-height: 120px;
-    }
-    .honeypot {
-      display: none;
-    }
-  </style>
-</head>
-<body class="light font-display">
-<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden bg-background-light dark:bg-background-dark">
-<div class="layout-container flex h-full grow flex-col">
-<div class="px-4 lg:px-40 flex flex-1 justify-center py-5">
-<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
-<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f3f4] dark:border-b-[#2a3c46] px-4 sm:px-10 py-3">
-<div class="flex items-center gap-4 text-[#111618] dark:text-white">
-<div class="size-6 text-primary">
-<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-<path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z" fill="currentColor"></path>
-</svg>
-</div>
-<h2 class="text-[#111618] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Wanderlust</h2>
-</div>
-<div class="hidden md:flex flex-1 justify-end gap-8">
-<div class="flex items-center gap-9">
-<a class="text-[#111618] dark:text-white text-sm font-medium leading-normal" href="#">Destinations</a>
-<a class="text-[#111618] dark:text-white text-sm font-medium leading-normal" href="#">Experiences</a>
-<a class="text-[#111618] dark:text-white text-sm font-medium leading-normal" href="#">About</a>
-<a class="text-[#111618] dark:text-white text-sm font-medium leading-normal" href="#">Contact Us</a>
-</div>
-<div class="flex gap-2">
-<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em]">
-<span class="truncate">Sign Up</span>
-</button>
-<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#f0f3f4] dark:bg-[#2a3c46] text-[#111618] dark:text-white text-sm font-bold leading-normal tracking-[0.015em]">
-<span class="truncate">Log In</span>
-</button>
-</div>
-</div>
-<button class="md:hidden flex items-center justify-center size-10 rounded-lg bg-background-light dark:bg-background-dark text-[#111618] dark:text-white">
-<span class="material-symbols-outlined">menu</span>
-</button>
-</header>
-<main class="flex flex-col gap-10 p-4 sm:p-10">
-<div class="flex flex-col gap-3 text-center">
-<p class="text-[#111618] dark:text-white text-4xl font-black leading-tight tracking-[-0.033em]">Get in Touch</p>
-<p class="text-[#617c89] dark:text-gray-400 text-base font-normal leading-normal max-w-2xl mx-auto">
-                We'd love to hear from you. Whether you have a question about our destinations, need assistance with a booking, or just want to share your travel stories, our team is ready to help.
-              </p>
-</div>
-<div class="w-full max-w-2xl mx-auto bg-white dark:bg-background-dark p-6 sm:p-8 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
-<form class="flex flex-col gap-6">
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-<label class="flex flex-col min-w-40 flex-1">
-<p class="text-[#111618] dark:text-white text-base font-medium leading-normal pb-2">Full Name</p>
-<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111618] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#dbe2e6] dark:border-gray-600 bg-white dark:bg-[#1a2831] focus:border-primary h-14 placeholder:text-[#617c89] dark:placeholder:text-gray-400 p-[15px] text-base font-normal leading-normal" placeholder="Enter your full name" required="" value=""/>
-</label>
-<label class="flex flex-col min-w-40 flex-1">
-<p class="text-[#111618] dark:text-white text-base font-medium leading-normal pb-2">Email Address</p>
-<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111618] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#dbe2e6] dark:border-gray-600 bg-white dark:bg-[#1a2831] focus:border-primary h-14 placeholder:text-[#617c89] dark:placeholder:text-gray-400 p-[15px] text-base font-normal leading-normal" placeholder="Enter your email address" required="" type="email" value=""/>
-</label>
-</div>
-<label class="flex flex-col min-w-40 flex-1">
-<p class="text-[#111618] dark:text-white text-base font-medium leading-normal pb-2">Subject (Optional)</p>
-<select class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111618] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#dbe2e6] dark:border-gray-600 bg-white dark:bg-[#1a2831] focus:border-primary h-14 placeholder:text-[#617c89] dark:placeholder:text-gray-400 p-[15px] text-base font-normal leading-normal appearance-none bg-no-repeat bg-right" style="--select-button-svg: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2724px%27 height=%2724px%27 fill=%27rgb(97,124,137)%27 viewBox=%270 0 256 256%27%3e%3cpath d=%27M181.66,170.34a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-48-48a8,8,0,0,1,11.32-11.32L128,212.69l42.34-42.35A8,8,0,0,1,181.66,170.34Zm-96-84.68L128,43.31l42.34,42.35a8,8,0,0,0,11.32-11.32l-48-48a8,8,0,0,0-11.32,0l-48,48A8,8,0,0,0,85.66,85.66Z%27%3e%3c/path%3e%3c/svg%3e');">
-<option value="general">General Inquiry</option>
-<option value="booking">Booking Question</option>
-<option value="feedback">Feedback</option>
-<option value="partnership">Partnership</option>
-</select>
-</label>
-<label class="flex flex-col min-w-40 flex-1">
-<p class="text-[#111618] dark:text-white text-base font-medium leading-normal pb-2">Your Message</p>
-<textarea class="form-input form-input-textarea flex w-full min-w-0 flex-1 resize-y overflow-hidden rounded-lg text-[#111618] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#dbe2e6] dark:border-gray-600 bg-white dark:bg-[#1a2831] focus:border-primary placeholder:text-[#617c89] dark:placeholder:text-gray-400 p-[15px] text-base font-normal leading-normal" placeholder="Tell us how we can help..." required=""></textarea>
-</label>
-<input class="honeypot" name="honeypot" type="text"/>
-<button class="flex w-full min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-14 px-4 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors duration-200" type="submit">
-<span class="truncate">Send Message</span>
-</button>
-</form>
-</div>
-<div class="text-center mt-6">
-<p class="text-[#111618] dark:text-white text-lg font-medium leading-normal">Alternative ways to reach us</p>
-<div class="flex justify-center items-center gap-6 mt-4 text-[#617c89] dark:text-gray-400">
-<a class="flex items-center gap-2 hover:text-primary dark:hover:text-primary transition-colors" href="tel:+1234567890">
-<span class="material-symbols-outlined">call</span>
-<span>+1 (234) 567-890</span>
-</a>
-<a class="flex items-center gap-2 hover:text-primary dark:hover:text-primary transition-colors" href="mailto:contact@wanderlust.com">
-<span class="material-symbols-outlined">email</span>
-<span>contact@wanderlust.com</span>
-</a>
-</div>
-</div>
-</main>
-<footer class="text-center py-6 border-t border-gray-200 dark:border-gray-700 mt-10">
-<p class="text-[#617c89] dark:text-gray-400 text-sm">© 2024 Wanderlust. All rights reserved.</p>
-</footer>
-</div>
-</div>
-</div>
-</div>
-</body></html>
-
-<!DOCTYPE html>
-
 <html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -614,7 +46,7 @@
 <div class="flex items-center gap-8">
 <div class="flex items-center gap-4 text-gray-900 dark:text-white">
 <div class="size-6 text-primary">
-<svg fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1.5 14.5l-3-3 1.06-1.06 1.94 1.94 4.94-4.94 1.06 1.06-6 6z"></path>
 </svg>
 </div>
@@ -644,36 +76,12 @@
 <span class="text-gray-500 dark:text-gray-400 text-sm font-medium leading-normal">/</span>
 <a class="text-gray-500 dark:text-gray-400 text-sm font-medium leading-normal hover:text-primary" href="#">Recommendations</a>
 <span class="text-gray-500 dark:text-gray-400 text-sm font-medium leading-normal">/</span>
-<span class="text-gray-800 dark:text-white text-sm font-medium leading-normal">Paris</span>
+<span class="text-gray-800 dark:text-white text-sm font-medium leading-normal">Search Results</span>
 </div>
 <div class="flex flex-wrap justify-between items-center gap-4 p-4">
 <div class="flex min-w-72 flex-col gap-2">
-<p class="text-gray-900 dark:text-white text-4xl font-black leading-tight tracking-tight">Top Sights in Paris</p>
-<p class="text-gray-600 dark:text-gray-400 text-base font-normal leading-normal">Discover the most iconic landmarks and attractions in the City of Light.</p>
-</div>
-<div class="flex-shrink-0">
-<div class="flex flex-col items-center gap-2 p-4 rounded-xl bg-white dark:bg-gray-800/50 shadow-sm">
-<p class="text-sm font-medium text-gray-600 dark:text-gray-400">Current Local Time in Paris</p>
-<div class="flex gap-2">
-<div class="flex grow basis-0 flex-col items-stretch gap-2">
-<div class="flex h-16 w-16 grow items-center justify-center rounded-lg px-3 bg-gray-100 dark:bg-gray-700">
-<p class="text-gray-900 dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em]">14</p>
-</div>
-</div>
-<div class="flex items-center text-3xl font-bold text-gray-400 dark:text-gray-500">:</div>
-<div class="flex grow basis-0 flex-col items-stretch gap-2">
-<div class="flex h-16 w-16 grow items-center justify-center rounded-lg px-3 bg-gray-100 dark:bg-gray-700">
-<p class="text-gray-900 dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em]">30</p>
-</div>
-</div>
-<div class="flex items-center text-3xl font-bold text-gray-400 dark:text-gray-500">:</div>
-<div class="flex grow basis-0 flex-col items-stretch gap-2">
-<div class="flex h-16 w-16 grow items-center justify-center rounded-lg px-3 bg-gray-100 dark:bg-gray-700">
-<p class="text-gray-900 dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em]">00</p>
-</div>
-</div>
-</div>
-</div>
+<p class="text-gray-900 dark:text-white text-4xl font-black leading-tight tracking-tight">Your Next Adventure Awaits</p>
+<p class="text-gray-600 dark:text-gray-400 text-base font-normal leading-normal">Based on your preferences, here are some destinations you might love.</p>
 </div>
 </div>
 <div class="p-4 flex flex-col sm:flex-row gap-4 justify-between items-center">
@@ -682,16 +90,13 @@
                                 All
                             </button>
 <button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-300 pl-4 pr-4 text-sm font-medium leading-normal hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
-                                Museums
+                                Beaches
                             </button>
 <button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-300 pl-4 pr-4 text-sm font-medium leading-normal hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
-                                Landmarks
+                                Temples
                             </button>
 <button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-300 pl-4 pr-4 text-sm font-medium leading-normal hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
-                                Parks
-                            </button>
-<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-300 pl-4 pr-4 text-sm font-medium leading-normal hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
-                                Food
+                                Cities
                             </button>
 </div>
 <div class="flex items-center gap-2">
@@ -700,7 +105,7 @@
 <div class="text-gray-500 dark:text-gray-400 flex border-none bg-white dark:bg-gray-800 items-center justify-center pl-3 rounded-l-lg border-r-0">
 <span class="material-symbols-outlined !text-xl">search</span>
 </div>
-<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-gray-800 dark:text-white focus:outline-0 focus:ring-0 border-none bg-white dark:bg-gray-800 focus:border-none h-full placeholder:text-gray-500 dark:placeholder:text-gray-400 px-2 rounded-l-none border-l-0 text-sm font-normal leading-normal" placeholder="Search sights..." value=""/>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-gray-800 dark:text-white focus:outline-0 focus:ring-0 border-none bg-white dark:bg-gray-800 focus:border-none h-full placeholder:text-gray-500 dark:placeholder:text-gray-400 px-2 rounded-l-none border-l-0 text-sm font-normal leading-normal" placeholder="Search destinations..." value=""/>
 </div>
 </label>
 <button class="flex h-10 items-center justify-center gap-x-2 rounded-lg bg-white dark:bg-gray-800 pl-4 pr-3 text-gray-800 dark:text-gray-300 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
@@ -712,79 +117,91 @@
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
 <div class="flex flex-col bg-white dark:bg-gray-800/50 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
 <div class="relative">
-<img class="w-full h-48 object-cover" data-alt="Eiffel Tower in Paris at sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVNkc9lT5woDY3_1C9iNQbdqOnVWwm-nrAaMb5loHqGDsb92XyMNCEZ5EEV05vyVs-DEguvEwcdce4h8BGqkL0eoYJH5lb-GwQW3g05y7kxACKz0cO_llF8uKZbweftppnUrFiN2J5S6tWBS5WTATmSbnpbmpeJjysvMz56ID9kH9OnfG5_eYZsbSwRBZMA6sogAORJM5hWrJ-viypYffrmvYDCTX6Mo_OP8T1bNI7iJ12apUOjtNT3XyWN_eEI-nAuQzXLa85Itx-"/>
-<div class="absolute top-2 right-2 bg-primary/80 backdrop-blur-sm text-white text-xs font-bold px-2 py-1 rounded-full">Landmark</div>
+<img class="w-full h-48 object-cover" data-alt="Sunny beach in the Maldives" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVNkc9lT5woDY3_1C9iNQbdqOnVWwm-nrAaMb5loHqGDsb92XyMNCEZ5EEV05vyVs-DEguvEwcdce4h8BGqkL0eoYJH5lb-GwQW3g05y7kxACKz0cO_llF8uKZbweftppnUrFiN2J5S6tWBS5WTATmSbnpbmpeJjysvMz56ID9kH9OnfG5_eYZsbSwRBZMA6sogAORJM5hWrJ-viypYffrmvYDCTX6Mo_OP8T1bNI7iJ12apUOjtNT3XyWN_eEI-nAuQzXLa85Itx-"/>
+<div class="absolute top-2 right-2 bg-primary/80 backdrop-blur-sm text-white text-xs font-bold px-2 py-1 rounded-full">Beach</div>
 </div>
 <div class="p-4 flex flex-col flex-grow">
-<h3 class="text-lg font-bold text-gray-900 dark:text-white mb-1">Eiffel Tower</h3>
-<p class="text-sm text-gray-600 dark:text-gray-400 flex-grow mb-4">The iconic iron lattice tower is a global cultural icon of France and one of the most recognizable structures in the world.</p>
+<h3 class="text-lg font-bold text-gray-900 dark:text-white mb-1">Maldives</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-grow mb-4">Known for its pristine beaches, turquoise waters, and luxurious overwater bungalows.</p>
 <button class="mt-auto w-full flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-<span class="truncate">Learn More</span>
+<span class="truncate">Explore</span>
 </button>
 </div>
 </div>
 <div class="flex flex-col bg-white dark:bg-gray-800/50 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
 <div class="relative">
-<img class="w-full h-48 object-cover" data-alt="Interior of the Louvre Museum with the Pyramid in the background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZUZc_LjP3Gj3kfHTqk9EGwCeASgGeSj_SLMVy6no4EsKG9FH524-kYVUSmUNLkITIsekBfpVZBypGDr6mOKIVJwNhATk27lo3ZqlNSGozVAEXfxdlRK1R_LQQSNuXbtkiaZixzOkxIYD6YfLctOaejEJbWjuE-rfbzejyisMXbXYeJG4NKfHfKeW3q2WO6UColb6pIFZTBZqvOp20gvvyqhDppPl7HqOpaQVk2vIOT0m2Z4XkZ8QZiLftTePQQA7VXVraFUMUeBVr"/>
-<div class="absolute top-2 right-2 bg-primary/80 backdrop-blur-sm text-white text-xs font-bold px-2 py-1 rounded-full">Museum</div>
+<img class="w-full h-48 object-cover" data-alt="Angkor Wat temple in Cambodia" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZUZc_LjP3Gj3kfHTqk9EGwCeASgGeSj_SLMVy6no4EsKG9FH524-kYVUSmUNLkITIsekBfpVZBypGDr6mOKIVJwNhATk27lo3ZqlNSGozVAEXfxdlRK1R_LQQSNuXbtkiaZixzOkxIYD6YfLctOaejEJbWjuE-rfbzejyisMXbXYeJG4NKfHfKeW3q2WO6UColb6pIFZTBZqvOp20gvvyqhDppPl7HqOpaQVk2vIOT0m2Z4XkZ8QZiLftTePQQA7VXVraFUMUeBVr"/>
+<div class="absolute top-2 right-2 bg-primary/80 backdrop-blur-sm text-white text-xs font-bold px-2 py-1 rounded-full">Temple</div>
 </div>
 <div class="p-4 flex flex-col flex-grow">
-<h3 class="text-lg font-bold text-gray-900 dark:text-white mb-1">Louvre Museum</h3>
-<p class="text-sm text-gray-600 dark:text-gray-400 flex-grow mb-4">The world's largest art museum and a historic monument, home to masterpieces like the Mona Lisa and the Venus de Milo.</p>
+<h3 class="text-lg font-bold text-gray-900 dark:text-white mb-1">Angkor Wat, Cambodia</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-grow mb-4">A magnificent temple complex, the largest religious monument in the world, with stunning architecture.</p>
 <button class="mt-auto w-full flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-<span class="truncate">Learn More</span>
+<span class="truncate">Explore</span>
 </button>
 </div>
 </div>
 <div class="flex flex-col bg-white dark:bg-gray-800/50 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
 <div class="relative">
-<img class="w-full h-48 object-cover" data-alt="Notre-Dame Cathedral in Paris" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDR79H20xZTr2ZLVGRFlE5kh0wqRRLDiomXLfDA3NobXNiuO519km95o8R63N2JNTfzwucQhxYH9BZqGpPHiBVZxHQUS6YLSa13LtigpEWeP3V2kJ110I7frBYW8YTF8k3D8aDFQpeHEMQHU-11ZroyIErVUCLaYzkLeovlSWyGWatIvyh9uh3fmqJd-MlKlu41u_za9evuR3YO27qKZOxVrIfE7KvKkEYTbkkeR6mEoOmkEvilxlfXZnfT37DdyXXS-mQVNcvTQmfd"/>
-<div class="absolute top-2 right-2 bg-primary/80 backdrop-blur-sm text-white text-xs font-bold px-2 py-1 rounded-full">Landmark</div>
+<img class="w-full h-48 object-cover" data-alt="Eiffel Tower in Paris at sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDR79H20xZTr2ZLVGRFlE5kh0wqRRLDiomXLfDA3NobXNiuO519km95o8R63N2JNTfzwucQhxYH9BZqGpPHiBVZxHQUS6YLSa13LtigpEWeP3V2kJ110I7frBYW8YTF8k3D8aDFQpeHEMQHU-11ZroyIErVUCLaYzkLeovlSWyGWatIvyh9uh3fmqJd-MlKlu41u_za9evuR3YO27qKZOxVrIfE7KvKkEYTbkkeR6mEoOmkEvilxlfXZnfT37DdyXXS-mQVNcvTQmfd"/>
+<div class="absolute top-2 right-2 bg-primary/80 backdrop-blur-sm text-white text-xs font-bold px-2 py-1 rounded-full">City</div>
 </div>
 <div class="p-4 flex flex-col flex-grow">
-<h3 class="text-lg font-bold text-gray-900 dark:text-white mb-1">Notre-Dame Cathedral</h3>
-<p class="text-sm text-gray-600 dark:text-gray-400 flex-grow mb-4">A medieval Catholic cathedral considered to be one of the finest examples of French Gothic architecture.</p>
+<div class="flex justify-between items-start mb-1">
+<h3 class="text-lg font-bold text-gray-900 dark:text-white">Paris, France</h3>
+<div class="flex items-center gap-1 text-sm font-medium text-gray-600 dark:text-gray-400">
+<span class="material-symbols-outlined !text-base">schedule</span>
+<span>14:30</span>
+</div>
+</div>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-grow mb-4">The "City of Light," famous for its art, fashion, gastronomy, and culture.</p>
 <button class="mt-auto w-full flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-<span class="truncate">Learn More</span>
+<span class="truncate">Explore</span>
 </button>
 </div>
 </div>
 <div class="flex flex-col bg-white dark:bg-gray-800/50 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
 <div class="relative">
-<img class="w-full h-48 object-cover" data-alt="Arc de Triomphe in Paris" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkmqaUb-utyNEQ-8WboNGGvBJ1DWTaV-MkjbO5QLGAHKvOYIxT0GVD3jwSmYvrCm69B1Au8pPhJTTlm5tF8H520tgFx8ioDkUL5SVek0ofvmRWlT1efS7UPWOCiyxYU09WJHG230aZyhSqe23sZ-548Vo_ZLspo5cSGeFpN9Pjz8TGvzgSul59itqgRo8bAHEcsCZxR_nnpx23CJNlYK9gIOCACQEcnke8mSlJ-gGMxX5rRSqpwGzN260o02hGREqSISjA-llxjAEp"/>
-<div class="absolute top-2 right-2 bg-primary/80 backdrop-blur-sm text-white text-xs font-bold px-2 py-1 rounded-full">Landmark</div>
+<img class="w-full h-48 object-cover" data-alt="Bora Bora island with overwater bungalows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkmqaUb-utyNEQ-8WboNGGvBJ1DWTaV-MkjbO5QLGAHKvOYIxT0GVD3jwSmYvrCm69B1Au8pPhJTTlm5tF8H520tgFx8ioDkUL5SVek0ofvmRWlT1efS7UPWOCiyxYU09WJHG230aZyhSqe23sZ-548Vo_ZLspo5cSGeFpN9Pjz8TGvzgSul59itqgRo8bAHEcsCZxR_nnpx23CJNlYK9gIOCACQEcnke8mSlJ-gGMxX5rRSqpwGzN260o02hGREqSISjA-llxjAEp"/>
+<div class="absolute top-2 right-2 bg-primary/80 backdrop-blur-sm text-white text-xs font-bold px-2 py-1 rounded-full">Beach</div>
 </div>
 <div class="p-4 flex flex-col flex-grow">
-<h3 class="text-lg font-bold text-gray-900 dark:text-white mb-1">Arc de Triomphe</h3>
-<p class="text-sm text-gray-600 dark:text-gray-400 flex-grow mb-4">Stands at the center of the Place Charles de Gaulle, honoring those who fought and died for France in the French Revolutionary and Napoleonic Wars.</p>
+<h3 class="text-lg font-bold text-gray-900 dark:text-white mb-1">Bora Bora, French Polynesia</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-grow mb-4">A volcanic island surrounded by a vibrant turquoise lagoon and a coral reef.</p>
 <button class="mt-auto w-full flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-<span class="truncate">Learn More</span>
+<span class="truncate">Explore</span>
 </button>
 </div>
 </div>
 <div class="flex flex-col bg-white dark:bg-gray-800/50 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
 <div class="relative">
-<img class="w-full h-48 object-cover" data-alt="View of Montmartre and the Sacré-Cœur" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWvhGTr6HMwlpyD916_O1VpGUuLU6yDBYcY3CwLYXSRp7_OujC2fB5BNyMIOUcI5GvO2xMPyE95w_f-eEgGEoiTYS506Sg72U8tgJSUXGEgt2G2ex7oKKVnF7KfRigO0bZRM4ZCLI_TN_ERlr6XEd8Tb8ZzcIgbK23goVAweA716f6pkyL4h7MLybzRZ6i_Wsxp89tjVWQssFW5TbMUH8matP5A9cLvh0aRyR5VwYZ6G8RE5kRlagxLKEQW5eVhhr7GGBJDCYFYpkO"/>
-<div class="absolute top-2 right-2 bg-primary/80 backdrop-blur-sm text-white text-xs font-bold px-2 py-1 rounded-full">District</div>
+<img class="w-full h-48 object-cover" data-alt="The city of Kyoto in Japan during cherry blossom season" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWvhGTr6HMwlpyD916_O1VpGUuLU6yDBYcY3CwLYXSRp7_OujC2fB5BNyMIOUcI5GvO2xMPyE95w_f-eEgGEoiTYS506Sg72U8tgJSUXGEgt2G2ex7oKKVnF7KfRigO0bZRM4ZCLI_TN_ERlr6XEd8Tb8ZzcIgbK23goVAweA716f6pkyL4h7MLybzRZ6i_Wsxp89tjVWQssFW5TbMUH8matP5A9cLvh0aRyR5VwYZ6G8RE5kRlagxLKEQW5eVhhr7GGBJDCYFYpkO"/>
+<div class="absolute top-2 right-2 bg-primary/80 backdrop-blur-sm text-white text-xs font-bold px-2 py-1 rounded-full">City</div>
 </div>
 <div class="p-4 flex flex-col flex-grow">
-<h3 class="text-lg font-bold text-gray-900 dark:text-white mb-1">Montmartre</h3>
-<p class="text-sm text-gray-600 dark:text-gray-400 flex-grow mb-4">A large hill in Paris's 18th arrondissement, known for its artistic history and the white-domed Basilica of the Sacré-Cœur on its summit.</p>
+<div class="flex justify-between items-start mb-1">
+<h3 class="text-lg font-bold text-gray-900 dark:text-white">Kyoto, Japan</h3>
+<div class="flex items-center gap-1 text-sm font-medium text-gray-600 dark:text-gray-400">
+<span class="material-symbols-outlined !text-base">schedule</span>
+<span>21:30</span>
+</div>
+</div>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-grow mb-4">Famous for its classical Buddhist temples, as well as gardens, imperial palaces, Shinto shrines and traditional wood houses.</p>
 <button class="mt-auto w-full flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-<span class="truncate">Learn More</span>
+<span class="truncate">Explore</span>
 </button>
 </div>
 </div>
 <div class="flex flex-col bg-white dark:bg-gray-800/50 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group">
 <div class="relative">
-<img class="w-full h-48 object-cover" data-alt="Jardin du Luxembourg in Paris" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDM071uDW0IWQQEA4eImoIfgyRkw5d01alQP-vYMpTcwmZyw7VUpi3dtPkjB8Vh6Ip7Jt0SdRvW1foQl0tF8f0PSlHrea9IgzTT2SHnHLzYPF2N_hHNkAgKKQVFf5cmhlRs2NLXtknv1CjiPzRR-BJdtZTDs82EoZFeLX2Dwf3IN7_x2w3Ym_pwS9nVNryUgfd3A5COFZOSZuw59BoeFEg8Ye9iycIij4XfkuW71RaPsANjvaSS35vaphvsMY90NHqf-UHKvDr6nW5Z"/>
-<div class="absolute top-2 right-2 bg-primary/80 backdrop-blur-sm text-white text-xs font-bold px-2 py-1 rounded-full">Park</div>
+<img class="w-full h-48 object-cover" data-alt="The ancient city of Petra in Jordan" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDM071uDW0IWQQEA4eImoIfgyRkw5d01alQP-vYMpTcwmZyw7VUpi3dtPkjB8Vh6Ip7Jt0SdRvW1foQl0tF8f0PSlHrea9IgzTT2SHnHLzYPF2N_hHNkAgKKQVFf5cmhlRs2NLXtknv1CjiPzRR-BJdtZTDs82EoZFeLX2Dwf3IN7_x2w3Ym_pwS9nVNryUgfd3A5COFZOSZuw59BoeFEg8Ye9iycIij4XfkuW71RaPsANjvaSS35vaphvsMY90NHqf-UHKvDr6nW5Z"/>
+<div class="absolute top-2 right-2 bg-primary/80 backdrop-blur-sm text-white text-xs font-bold px-2 py-1 rounded-full">Temple</div>
 </div>
 <div class="p-4 flex flex-col flex-grow">
-<h3 class="text-lg font-bold text-gray-900 dark:text-white mb-1">Jardin du Luxembourg</h3>
-<p class="text-sm text-gray-600 dark:text-gray-400 flex-grow mb-4">A beautiful garden featuring lawns, tree-lined promenades, flowerbeds, and the picturesque Medici Fountain.</p>
+<h3 class="text-lg font-bold text-gray-900 dark:text-white mb-1">Petra, Jordan</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-grow mb-4">An archaeological city famous for its rock-cut architecture and water conduit system.</p>
 <button class="mt-auto w-full flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-<span class="truncate">Learn More</span>
+<span class="truncate">Explore</span>
 </button>
 </div>
 </div>
@@ -798,4 +215,5 @@
 </main>
 </div>
 </div>
+
 </body></html>
