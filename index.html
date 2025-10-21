@@ -1,94 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TravelBloom - Explore Your World</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelBloom</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="travel_recommendation.js" defer></script>
 </head>
 <body>
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="logo">TravelBloom</div>
-    <ul class="nav-links">
-      <li><a href="#hero">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">
+            <i class="fa fa-plane" style="font-size:36px;"></i>
+            <h1>TravelBloom</h1>
+        </div>
+        <ul>
+            <li><a href="/travel-zoom/index">Home</a></li>
+            <li><a href="/travel-zoom/about-us">About Us</a></li>
+            <li><a href="/travel-zoom/contact-us">Contact Us</a></li>
+        </ul>
+        <div class="search-container">
+            <input type="text" placeholder="Enter a destination or keyword" id="searchInput" class="search-input">
+            <button onclick="performSearch()" class="search-btn">Search</button>
+            <button onclick="resetSearch()" class="clear-btn">Clear</button>
+        </div>
+    </nav>
 
-  <!-- Hero Section -->
-  <section id="hero" class="hero">
-    <div class="hero-content fade-in">
-      <h1>Explore, Dream, Discover</h1>
-      <p>Your personalized travel companion to unforgettable adventures.</p>
-      <button onclick="scrollToSearch()">Book Now</button>
-    </div>
-  </section>
+    <!-- Home Page Content -->
+    <header>
+        <div class="social-line"></div>
+        <div class="social-icons">
+            <ul>
+                <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+        </div>
+        <div class="header-content">
+            <h1>Explore<br> Dream<br> Destination</h1>
+            <p>It encourages exploration of unfamiliar territories, embracing diverse cultures and landscapes, while pursuing the desired destination that captivates the heart and ignites a sense of wonder.</p>
+            <button>Book Now</button>
+        </div>
+    </header>
 
-  <!-- Search Section -->
-  <section id="search" class="search-section fade-in">
-    <h2>Find Your Perfect Destination</h2>
-    <div class="search-bar">
-      <input type="text" id="searchInput" placeholder="Beach, Temple, or City...">
-      <button onclick="performSearch()">Search</button>
-    </div>
-    <div id="results" class="results"></div>
-  </section>
+<script>
+    function performSearch() {
+        // Functionality to search for recommendations
+        var input = document.getElementById('searchInput').value;
+        alert('Search for: ' + input);
+    }
 
-  <!-- About Section -->
-  <section id="about" class="about fade-in">
-    <h1>About TravelBloom</h1>
-    <p>We provide personalized travel recommendations to explore the world your way.</p>
-    <div class="team">
-      <div class="member">
-        <h3>Jane Doe</h3>
-        <p>Founder & CEO</p>
-      </div>
-      <div class="member">
-        <h3>John Smith</h3>
-        <p>Head of Travel Recommendations</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="contact fade-in">
-    <h1>Contact Us</h1>
-    <form id="contactForm">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-    <div id="formMessage"></div>
-  </section>
-
-  <script src="data.js"></script>
-  <script src="script.js"></script>
-  <script>
-    // Contact form submission
-    const form = document.getElementById('contactForm');
-    const formMessage = document.getElementById('formMessage');
-
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      formMessage.textContent = "Thank you! We'll get back to you shortly.";
-      form.reset();
-    });
-
-    // Scroll-triggered animations
-    const faders = document.querySelectorAll('.fade-in');
-    const appearOptions = { threshold: 0.2, rootMargin: "0px 0px -50px 0px" };
-    const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll){
-      entries.forEach(entry => {
-        if(!entry.isIntersecting) return;
-        entry.target.classList.add('appear');
-        appearOnScroll.unobserve(entry.target);
-      });
-    }, appearOptions);
-
-    faders.forEach(fader => appearOnScroll.observe(fader));
-  </script>
+    function resetSearch() {
+        // Functionality to clear the search input
+        document.getElementById('searchInput').value = '';
+    }
+</script>
 </body>
+
+
 </html>
