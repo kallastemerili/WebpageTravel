@@ -10,10 +10,6 @@ body {
   color: #333;
   background-color: #f5f5f5;
 }
-a {
-  text-decoration: none;
-  color: inherit;
-}
 
 /* Navigation Bar */
 nav {
@@ -44,6 +40,38 @@ nav ul li {
 nav ul li:hover {
   color: #ffd60a;
   transform: scale(1.1);
+}
+/* Navbar Search */
+.nav-search {
+  position: relative;
+}
+.nav-search input {
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  font-size: 0.9rem;
+}
+.nav-search-results {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border-radius: 8px;
+  max-height: 200px;
+  overflow-y: auto;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+.nav-search-results div {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.nav-search-results div:hover {
+  background-color: #ffd60a;
+  color: #fff;
 }
 
 /* Hero Section */
@@ -84,7 +112,7 @@ nav ul li:hover {
   transform: scale(1.05);
 }
 
-/* Sections */
+/* Sections and Cards */
 section {
   padding: 80px 2rem;
   max-width: 1200px;
@@ -96,8 +124,6 @@ section h2 {
   text-align: center;
   color: #0077b6;
 }
-
-/* Cards */
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -248,46 +274,12 @@ button:hover {
 .timeline-item h4 { color: #0077b6; margin-bottom: 0.5rem; }
 .timeline-item p { color: #555; font-size: 1rem; }
 
-/* Search Bar */
-.search-container {
-  max-width: 500px;
-  margin: 2rem auto;
-  position: relative;
-}
-#search-input {
-  width: 100%;
-  padding: 0.8rem 1rem;
-  border-radius: 50px;
-  border: 1px solid #ccc;
-  outline: none;
-  font-size: 1rem;
-}
-.search-results {
-  position: absolute;
-  top: 110%;
-  left: 0;
-  width: 100%;
-  background: #fff;
-  border-radius: 8px;
-  max-height: 200px;
-  overflow-y: auto;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-  z-index: 10;
-}
-.search-results div {
-  padding: 0.8rem 1rem;
-  cursor: pointer;
-  transition: 0.2s;
-}
-.search-results div:hover { background-color: #ffd60a; color: #fff; }
-
 /* Responsive */
 @media(max-width:768px){
   .hero h1 { font-size: 2.2rem; }
   .hero p { font-size: 1.1rem; }
   nav ul { flex-direction: column; gap: 1rem; margin-top: 1rem; }
-  .cards { flex-direction: column; align-items: center; }
-  .team-cards { flex-direction: column; align-items: center; }
+  .cards, .team-cards { flex-direction: column; align-items: center; }
   .timeline { padding-left: 10px; }
   .timeline-item { padding-left: 60px; }
   .timeline-item::before { left: 30px; }
