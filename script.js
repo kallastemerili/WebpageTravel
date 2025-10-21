@@ -1,19 +1,75 @@
-const countryContainer = document.getElementById('country-cards');
+// Navbar Search
+const navSearchInput = document.getElementById('nav-search-input');
+const navSearchResults = document.getElementById('nav-search-results');
+let countries = [];
 
 fetch('https://restcountries.com/v3.1/all')
   .then(res => res.json())
   .then(data => {
-    const countries = data.slice(0, 8); // show 8 countries for demo
-    countries.forEach(country => {
-      const card = document.createElement('div');
-      card.classList.add('card');
-      card.innerHTML = `
-        <img src="${country.flags.png}" alt="${country.name.common}">
-        <div class="card-content">
-          <h3>${country.name.common}</h3>
-          <p>Region: ${country.region}<br>Population: ${country.population.toLocaleString()}</p>
-        </div>
-      `;
-      countryContainer.appendChild(card);
-    });
+    countries = data.map(c => c.name.common).sort();
   });
+
+navSearchInput.addEventListener('input', () => {
+  const query = navSearchInput.value.toLowerCase();
+  navSearchResults.innerHTML = '';
+  if(query) {
+    const filtered = countries.filter(c => c.toLowerCase().includes(query));
+    filtered.forEach(country => {
+      const div = document.createElement('div');
+      div.textContent = country;
+      div.addEventListener('click', () => {
+        navSearchInput.value = country;
+        navSearchResults.innerHTML = '';
+        alert(`You searched for ${country}. Recommendations will appear soon!`);
+      });
+      navSearchResults.appendChild(div);
+    });
+  }
+});
+document.addEventListener('click', (e) => {
+  if(!navSearchInput.contains(e.target)) navSearchResults.innerHTML = '';
+});
+
+// Home Page Recommendations
+const beachCards = document.getElementById('beach-cards');
+const templeCards = document.getElementById('temple-cards');
+const cityCards = document.getElementById('city-cards');
+
+const beaches = [
+  {name:"Maldives", img:"images/beach1.jpg"},
+  {name:"Bora Bora", img:"images/beach2.jpg"}
+];
+const temples = [
+  {name:"Angkor Wat, Cambodia", img:"images/temple1.jpg"},
+  {name:"Golden Temple, India", img:"images/temple2.jpg"}
+];
+const cities = [
+  {name:"Toronto, Canada", img:"images/city1.jpg"},
+  {name:"Paris, France", img:"images/city2.jpg"}
+];
+
+// Function to add local time
+function getLocalTime(cityName){
+  // Simplified demo using Intl API
+  const now = new Date();
+  return now.toLocaleTimeString('en-US', {hour: '2-digit', minute:'2-digit'});
+}
+
+function displayCards(container, items){
+  items.forEach(item=>{
+    const card = document.createElement('div');
+    card.classList.add('card');
+    card.innerHTML = `
+      <img src="${item.img}" alt="${item.name}">
+      <div class="card-content">
+        <h3>${item.name}</h3>
+        <p>Current Local Time: ${getLocalTime(item.name)}</p>
+      </div>
+    `;
+    container.appendChild(card);
+  });
+}
+
+displayCards(beachCards, beaches);
+displayCards(templeCards, temples);
+displayCards(cityCards, cities);
