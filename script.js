@@ -33,7 +33,7 @@ document.addEventListener('click', (e) => {
 // Home Page Recommendations
 const beachCards = document.getElementById('beach-cards');
 const templeCards = document.getElementById('temple-cards');
-const cityCards = document.getElementById('city-cards');
+const countryCards = document.getElementById('country-cards');
 
 const beaches = [
   {name:"Maldives", img:"images/beach1.jpg"},
@@ -44,12 +44,12 @@ const temples = [
   {name:"Golden Temple, India", img:"images/temple2.jpg"}
 ];
 const cities = [
-  {name:"Toronto, Canada", img:"images/city1.jpg"},
-  {name:"Paris, France", img:"images/city2.jpg"}
+  {name:"Toronto, Canada", img:"images/country1.jpg"},
+  {name:"Paris, France", img:"images/country2.jpg"}
 ];
 
 // Function to add local time
-function getLocalTime(cityName){
+function getLocalTime(countryName){
   // Simplified demo using Intl API
   const now = new Date();
   return now.toLocaleTimeString('en-US', {hour: '2-digit', minute:'2-digit'});
