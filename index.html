@@ -2,33 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Travel Recommendation - Home</title>
+  <title>TravelBloom</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-  <!-- Navigation Bar -->
+  <!-- Navigation -->
   <nav class="navbar">
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="contact.html">Contact Us</a>
-    <input type="text" id="searchInput" placeholder="Search destination...">
-    <button onclick="searchDestinations()">Search</button>
-    <button onclick="clearSearch()">Clear</button>
-    <span id="localTime"></span>
+    <div class="nav-left">
+      <a href="index.html" class="logo">TravelBloom</a>
+    </div>
+    <div class="nav-center">
+      <input type="text" id="searchInput" placeholder="Search destinations...">
+      <button onclick="searchDestinations()">Search</button>
+      <button onclick="clearSearch()">Clear</button>
+    </div>
+    <div class="nav-right">
+      <span id="localTime"></span>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </div>
   </nav>
 
-  <!-- Home Content -->
-  <main class="home">
-    <section class="intro">
-      <h1>Welcome to Your Travel Adventure!</h1>
-      <p>Discover ideal destinations based on your preferences – beaches, temples, or specific cities.</p>
-    </section>
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>Explore Your Dream Destinations</h1>
+    <p>Find the perfect beach, temple, or city based on your preferences.</p>
+  </header>
 
-    <section id="recommendations">
-      <!-- Dynamic recommendations will appear here -->
-    </section>
-  </main>
+  <!-- Recommendations Section -->
+  <section id="recommendations" class="recommendations"></section>
 
   <script src="js/script.js"></script>
 </body>
