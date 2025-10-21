@@ -74,3 +74,4 @@ function displayCards(container, items){
 displayCards(beachCards, beaches);
 displayCards(templeCards, temples);
 displayCards(countryCards, countriesData);
+
