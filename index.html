@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TravelBloom</title>
+<title>TravelBloom - Home</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,6 +16,10 @@
     <li onclick="location.href='about.html'">About Us</li>
     <li onclick="location.href='contact.html'">Contact Us</li>
   </ul>
+  <div class="nav-search">
+    <input type="text" id="nav-search-input" placeholder="Search destinations...">
+    <div class="nav-search-results" id="nav-search-results"></div>
+  </div>
 </nav>
 
 <!-- Hero Section -->
@@ -25,54 +29,22 @@
   <button onclick="window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })">Explore</button>
 </header>
 
-<!-- Beach Recommendation -->
+<!-- Beach Recommendations -->
 <section>
-  <h2>Beach Destinations</h2>
-  <div class="cards">
-    <div class="card">
-      <img src="images/beach1.jpg" alt="Maldives Beach">
-      <div class="card-content">
-        <h3>Maldives</h3>
-        <p>White sand beaches and crystal clear waters perfect for relaxation.</p>
-      </div>
-    </div>
-    <div class="card">
-      <img src="images/beach2.jpg" alt="Bora Bora Beach">
-      <div class="card-content">
-        <h3>Bora Bora</h3>
-        <p>Tropical paradise with overwater bungalows and breathtaking views.</p>
-      </div>
-    </div>
-  </div>
+  <h2>Top Beach Destinations</h2>
+  <div class="cards" id="beach-cards"></div>
 </section>
 
-<!-- Temple Recommendation -->
+<!-- Temple Recommendations -->
 <section>
-  <h2>Temple Destinations</h2>
-  <div class="cards">
-    <div class="card">
-      <img src="images/temple1.jpg" alt="Angkor Wat">
-      <div class="card-content">
-        <h3>Angkor Wat, Cambodia</h3>
-        <p>Historic temple complex known for stunning architecture and history.</p>
-      </div>
-    </div>
-    <div class="card">
-      <img src="images/temple2.jpg" alt="Golden Temple">
-      <div class="card-content">
-        <h3>Golden Temple, India</h3>
-        <p>Spiritual center with beautiful gold-plated architecture.</p>
-      </div>
-    </div>
-  </div>
+  <h2>Top Temple Destinations</h2>
+  <div class="cards" id="temple-cards"></div>
 </section>
 
-<!-- Country Recommendation -->
+<!-- City/Country Recommendations -->
 <section>
-  <h2>Explore Countries</h2>
-  <div class="cards" id="country-cards">
-    <!-- JS dynamically populates countries -->
-  </div>
+  <h2>Explore Cities & Countries</h2>
+  <div class="cards" id="city-cards"></div>
 </section>
 
 <script src="script.js"></script>
