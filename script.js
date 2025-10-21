@@ -1,77 +1,36 @@
-// Navbar Search
-const navSearchInput = document.getElementById('nav-search-input');
-const navSearchResults = document.getElementById('nav-search-results');
-let countries = [];
-
-fetch('https://restcountries.com/v3.1/all')
-  .then(res => res.json())
-  .then(data => {
-    countries = data.map(c => c.name.common).sort();
-  });
-
-navSearchInput.addEventListener('input', () => {
-  const query = navSearchInput.value.toLowerCase();
-  navSearchResults.innerHTML = '';
-  if(query) {
-    const filtered = countries.filter(c => c.toLowerCase().includes(query));
-    filtered.forEach(country => {
-      const div = document.createElement('div');
-      div.textContent = country;
-      div.addEventListener('click', () => {
-        navSearchInput.value = country;
-        navSearchResults.innerHTML = '';
-        alert(`You searched for ${country}. Recommendations will appear soon!`);
-      });
-      navSearchResults.appendChild(div);
-    });
-  }
-});
-document.addEventListener('click', (e) => {
-  if(!navSearchInput.contains(e.target)) navSearchResults.innerHTML = '';
-});
-
-// Home Page Recommendations
-const beachCards = document.getElementById('beach-cards');
-const templeCards = document.getElementById('temple-cards');
-const countryCards = document.getElementById('country-cards');
-
-const beaches = [
-  {name:"Maldives", img:"images/beach1.jpg"},
-  {name:"Bora Bora", img:"images/beach2.jpg"}
-];
-const temples = [
-  {name:"Angkor Wat, Cambodia", img:"images/temple1.jpg"},
-  {name:"Golden Temple, India", img:"images/temple2.jpg"}
-];
-const countriesData = [
-  {name:"Canada", img:"images/country1.jpg"},
-  {name:"France", img:"images/country2.jpg"}
-];
-
-// Function to display local time
-function getLocalTime() {
-  const now = new Date();
-  return now.toLocaleTimeString('en-US', {hour: '2-digit', minute:'2-digit'});
+function scrollToSearch() {
+  document.getElementById('search').scrollIntoView({ behavior: 'smooth' });
 }
 
-function displayCards(container, items){
-  if(!container) return;
-  container.innerHTML = '';
-  items.forEach(item=>{
+function performSearch() {
+  const input = document.getElementById('searchInput').value.toLowerCase();
+  const resultsDiv = document.getElementById('results');
+  resultsDiv.innerHTML = '';
+
+  const filtered = destinations.filter(dest => 
+    dest.name.toLowerCase().includes(input) || dest.type.includes(input)
+  );
+
+  if(filtered.length === 0) {
+    resultsDiv.innerHTML = '<p>No destinations found.</p>';
+    return;
+  }
+
+  filtered.forEach(dest => {
+    const localTime = new Date().toLocaleString("en-US", { timeZone: dest.timeZone });
     const card = document.createElement('div');
     card.classList.add('card');
+    
+    let imagesHTML = dest.images.map(img => 
+      `<img src="${img}" alt="${dest.name}" class="dest-image">`
+    ).join('');
+    
     card.innerHTML = `
-      <img src="${item.img}" alt="${item.name}">
-      <div class="card-content">
-        <h3>${item.name}</h3>
-        <p>Current Local Time: ${getLocalTime()}</p>
-      </div>
+      <h3>${dest.name}</h3>
+      <p>${dest.description}</p>
+      <p>Local Time: ${localTime}</p>
+      <div class="images">${imagesHTML}</div>
     `;
-    container.appendChild(card);
+    resultsDiv.appendChild(card);
   });
 }
-
-displayCards(beachCards, beaches);
-displayCards(templeCards, temples);
-displayCards(countryCards, countriesData);
-
