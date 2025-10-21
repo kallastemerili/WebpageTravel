@@ -50,12 +50,12 @@ const cities = [
 
 // Function to add local time
 function getLocalTime(countryName){
-  // Simplified demo using Intl API
   const now = new Date();
   return now.toLocaleTimeString('en-US', {hour: '2-digit', minute:'2-digit'});
 }
 
 function displayCards(container, items){
+  if(!container) return;
   items.forEach(item=>{
     const card = document.createElement('div');
     card.classList.add('card');
@@ -72,4 +72,4 @@ function displayCards(container, items){
 
 displayCards(beachCards, beaches);
 displayCards(templeCards, temples);
-displayCards(cityCards, cities);
+displayCards(countryCards, countries);
